@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+h1, pre, ul, h4{
+  font-family: Verdana;
+}
+h1, h4 {
+  color: #55983E;
+}
+pre, ul {
+  color: #17100D;
+}
