@@ -36,6 +36,26 @@
   	  	<li><a href="instrucs.pdf">Game Tutorial</a></li>
   	  	<li><a href="https://scratch.mit.edu/projects/296184028/">Original written in Scratch</a></li>
   	  </ul>
+      <button type="button" onclick="getFeedback()">Send Feedback</button>
+      <script>
+        function getFeedback() {
+          var text = prompt("Enter Feedback")
+          if (text == null) {
+            alert("Please enter text")
+          } else {
+          Email.send({
+               SecureToken : "8f3f3aff-06d2-493b-aa98-1d135b73a48b",
+               To : "thebun636@gmail.com", 
+               From : "feedback@predpreygame.ga",
+               Subject : "Feedback",
+               Body : text
+           }).then(
+              function data(x) {
+                print(x)
+           })
+          }
+        }
+      </script>
   	</div>
     <script src="sketch.js"></script>
   
